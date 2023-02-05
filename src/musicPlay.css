@@ -1,0 +1,48 @@
+.component {
+    width: 350px;
+    background-color: #d3d2d2;
+}
+
+.subTitle {
+    margin-top: 0;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.musicCover {
+    width: 170px;
+    height: 160px;
+    border-radius: 10%;
+    margin: 0px 90px;
+}
+
+.playButton {
+    background: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: #828282;
+    font-size: smaller;
+}
+
+.timeline {
+    width: 80%;
+    background-color: #27ae60;
+}
+
+input[type="range"] {
+    background-color: #27ae60;
+}
