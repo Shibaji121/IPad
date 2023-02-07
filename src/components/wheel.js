@@ -7,7 +7,7 @@ function Wheel(props) {
         let element = document.getElementById('nav-btns');
         let region = new ZingTouch.Region(element);
         let customGes = new ZingTouch.Pan({
-            threshold: 25,
+            threshold: 35,
             numInputs: 1,
         });
         region.bind(element, customGes, (e) => {
@@ -52,7 +52,7 @@ function Wheel(props) {
                         <i className="fas fa-fast-forward"></i>
                     </p>
                 </div>
-                <div id="play-pause">
+                <div id="play-pause" onClick={() => props.playBtn()}>
                     <i className="fas fa-play"></i>
                     <i className="fas fa-pause" style={{ paddingLeft: 4 }}></i>
                 </div>

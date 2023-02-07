@@ -58,7 +58,9 @@ body {
 #play-pause {
   position: absolute;
   top: 159px;
-  left: 86px;
+  left: 70px;
+  width: 40px;
+  margin-left: 20px;
   cursor: pointer;
 }
 #nav-btns {

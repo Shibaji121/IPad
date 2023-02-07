@@ -1,51 +1,49 @@
-import { useEffect, useState } from "react"; 
-import useSound from "use-sound"; // for handling the sound
-import qala from "../musicFolder/Song.mp3"; // importing the music
-import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"; // icons for play and pause
-import { IconContext } from "react-icons"; // for customazing the icons
+import React from 'react';
 import '../musicPlay.css';
 
-export default function AllSongs() {
+export default function AllSongs(props) {
 
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [play, { pause, duration, sound }] = useSound(qala);
+  const sec = props.dura / 1000;
+  const min = Math.floor(sec / 60);
+  const secRemain = Math.floor(sec % 60);
+  const time = {
+    min: min,
+    sec: secRemain
+  };
 
-    const playingButton = () => {
-        if (isPlaying) {
-          pause(); // this will pause the audio
-          setIsPlaying(false);
-        } else {
-          play(); // this will play the audio
-          setIsPlaying(true);
-        }
-      };
-
-    return(
-        <div className="component">
+  return (
+    <div className="component">
       <h2 className="text-center">Playing Now</h2>
       <img
         className="musicCover"
         src="https://i1.sndcdn.com/artworks-000240979273-spjalx-t500x500.jpg"
+        alt='song-cover'
       />
       <div>
         <h3 className="title text-center">Despacito</h3>
         <p className="subTitle text-center">Luis Fonsi</p>
       </div>
       <div>
-        {!isPlaying ? (
-          <button className="playButton" onClick={playingButton}>
-            <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-              <AiFillPlayCircle />
-            </IconContext.Provider>
-          </button>
-        ) : (
-          <button className="playButton" onClick={playingButton}>
-            <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-              <AiFillPauseCircle />
-            </IconContext.Provider>
-          </button>
-        )}
+        <div className="time">
+          <p>
+            {props.cTime.min}:{props.cTime.sec}
+          </p>
+          <p>
+            {time.min}:{time.sec}
+          </p>
+        </div>
+        <input
+          type="range"
+          min="0"
+          max={props.dura / 1000}
+          default="0"
+          value={props.sec}
+          className="timeline"
+          onChange={(e) => {
+            props.soud.seek([e.target.value]);
+          }}
+        />
       </div>
     </div>
-    );
+  );
 }

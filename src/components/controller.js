@@ -12,42 +12,38 @@ export default function Controller(props) {
 
 
     let jsxVal;
-    if(props.selectMenu === "")
-    {
+    if (props.selectMenu === "") {
         jsxVal = <Menu />
     }
-    else if(props.selectMenu === "cover-flow")
-    {
+    else if (props.selectMenu === "cover-flow") {
         jsxVal = <CoverFlow />
     }
-    else if(props.selectMenu === "music")
-    {
+    else if (props.selectMenu === "music") {
         jsxVal = <MusicPlayer />
     }
-    else if(props.selectMenu === "games")
-    {
+    else if (props.selectMenu === "games") {
         jsxVal = <Games />
     }
-    else if(props.selectMenu === "settings")
-    {
+    else if (props.selectMenu === "settings") {
         jsxVal = <Settings />
     }
-    else if(props.selectMenu === "artists")
-    {
+    else if (props.selectMenu === "artists") {
         jsxVal = <Artists />
     }
-    else if(props.selectMenu === "albums")
-    {
+    else if (props.selectMenu === "albums") {
         jsxVal = <Albums />
     }
-    else if(props.selectMenu === "all-songs")
-    {
-        jsxVal = <AllSongs />
+    else if (props.selectMenu === "all-songs") {
+        jsxVal = <AllSongs sec={props.secLine}
+            cTime={props.currTimeLine}
+            dura={props.duration}
+            soud={props.sound}
+        />
     }
 
 
 
-    return(
+    return (
         <div id="screen">
             {jsxVal}
         </div>
