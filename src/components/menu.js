@@ -10,22 +10,22 @@ export default function Menu() {
                     <h1 style={{ margin: '25px' }}>IPOD.JS</h1>
                     <ul>
                         <li id="cover-flow" className="high-light">Cover Flow
-                            <span className="hidden">
+                            <span>
                                 <i className="fas fa-chevron-right"></i>
                             </span>
                         </li>
                         <li id="music">Music Player
-                            <span className="hidden">
+                            <span>
                                 <i className="fas fa-chevron-right"></i>
                             </span>
                         </li>
                         <li id="games">Games
-                            <span className="hidden">
+                            <span>
                                 <i className="fas fa-chevron-right"></i>
                             </span>
                         </li>
                         <li id="settings">Settings
-                            <span className="hidden">
+                            <span>
                                 <i className="fas fa-chevron-right"></i>
                             </span>
                         </li>
