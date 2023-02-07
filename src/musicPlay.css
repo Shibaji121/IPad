@@ -1,14 +1,18 @@
 .component {
     width: 350px;
-    background-color: #d3d2d2;
+    background-image: linear-gradient(45deg,rgb(61, 245, 61), red, yellow);
 }
 
 .subTitle {
     margin-top: 0;
+    color: white;
+    font-style: italic;
 }
 
 .title {
     margin-bottom: 0;
+    color: white;
+    font-style: italic;
 }
 
 .text-center {
@@ -20,29 +24,22 @@
     height: 160px;
     border-radius: 10%;
     margin: 0px 90px;
-}
-
-.playButton {
-    background: none;
-    border: none;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 1px 4px 20px 8px papayawhip;
 }
 
 .time {
     margin: 0 auto;
-    width: 80%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
-    color: #828282;
+    color: white;
     font-size: smaller;
+    font-weight: 500;
 }
 
 .timeline {
-    width: 80%;
-    background-color: #27ae60;
-}
-
-input[type="range"] {
-    background-color: #27ae60;
+    width: 90%;
+    position: absolute;
+    bottom: 20px;
+    left: 12px;
 }

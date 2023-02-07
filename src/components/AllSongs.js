@@ -13,7 +13,7 @@ export default function AllSongs(props) {
 
   return (
     <div className="component">
-      <h2 className="text-center">Playing Now</h2>
+      <h2 className="text-center" style={{color:'white'}}>Playing Now</h2>
       <img
         className="musicCover"
         src="https://i1.sndcdn.com/artworks-000240979273-spjalx-t500x500.jpg"
@@ -26,10 +26,10 @@ export default function AllSongs(props) {
       <div>
         <div className="time">
           <p>
-            {props.cTime.min}:{props.cTime.sec}
+            {String(props.cTime.min).padStart(2,0)}:{String(props.cTime.sec).padStart(2,0)}
           </p>
           <p>
-            {time.min}:{time.sec}
+            {String(time.min).padStart(2,0)}:{String(time.sec).padStart(2,0)}
           </p>
         </div>
         <input
