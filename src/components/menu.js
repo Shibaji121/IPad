@@ -1,5 +1,6 @@
 import React from "react";
 
+// Menu Page
 export default function Menu() {
 
     return (

@@ -1,5 +1,6 @@
 import React from "react";
 
+// Artists Page
 export default function Artists() {
 
 

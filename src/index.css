@@ -1,3 +1,4 @@
+/* Whole Page style CSS */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -96,9 +97,7 @@ li {
   display: flex;
   justify-content: space-between;
 }
-/* .hidden {
-  display: none;
-} */
+
 .high-light {
   background-color: rgb(77, 77, 243);
   color: aliceblue;

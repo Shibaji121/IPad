@@ -8,6 +8,7 @@ import AllSongs from './AllSongs';
 import Artists from './Artists';
 import Albums from './Albums';
 
+// According to menu option from props, the correct page rendered
 export default function Controller(props) {
 
 

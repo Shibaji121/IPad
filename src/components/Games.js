@@ -1,5 +1,6 @@
 import React from "react";
 
+// Games Page
 export default function Games() {
 
 

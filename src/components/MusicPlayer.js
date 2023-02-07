@@ -1,5 +1,6 @@
 import React from "react";
 
+// Music Player page
 export default function MusicPlayer() {
 
 

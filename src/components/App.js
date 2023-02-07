@@ -6,6 +6,7 @@ import Despacito from "../musicFolder/Song.mp3";
 
 function App() {
 
+  // Setting states for different functions
   const [menuType, setMenu] = useState({ type: "" });
   const [isPlaying, setIsPlaying] = useState(false);
   const [currTime, setCurrTime] = useState({
@@ -15,6 +16,7 @@ function App() {
   const [seconds, setSeconds] = useState();
   const [play, { pause, duration, sound }] = useSound(Despacito);
 
+  // Checking continously to check the seconds
   useEffect(() => {
     const interval = setInterval(() => {
       if (sound) {
@@ -30,6 +32,7 @@ function App() {
     return () => clearInterval(interval);
   }, [sound]);
 
+  // Play and pause button function
   const playingButton = () => {
     if (menuType.type === 'all-songs') {
       if (isPlaying) {
@@ -42,11 +45,13 @@ function App() {
     }
   };
 
+  // Choosing the option as per highlight and setting the menu state to render the correct page
   function onSelec() {
     let id = document.getElementsByClassName('high-light')[0].id;
     setMenu({ type: id });
   }
 
+  // Function to set the page when menu clicked
   function menuSelec() {
     let mType = menuType.type;
     if (mType === "all-songs" || mType === "artists" || mType === "albums") {

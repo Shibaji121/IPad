@@ -1,8 +1,10 @@
 import React from "react";
 import ZingTouch from 'zingtouch';
 
+// Wheels page
 function Wheel(props) {
 
+    // Onloading of full Wheel
     window.onload = function () {
         let element = document.getElementById('nav-btns');
         let region = new ZingTouch.Region(element);
@@ -10,6 +12,7 @@ function Wheel(props) {
             threshold: 35,
             numInputs: 1,
         });
+    // Applying the gesture effect to highlight the option
         region.bind(element, customGes, (e) => {
             if (e) {
                 let menus = [], id="", index = 0, classList="";
@@ -37,7 +40,7 @@ function Wheel(props) {
         },false);
     };
 
-
+    // Wheels component
     return (
         <div className="outer-div">
             <div id="nav-btns">

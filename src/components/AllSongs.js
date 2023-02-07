@@ -1,8 +1,10 @@
 import React from 'react';
 import '../musicPlay.css';
 
+// All Songs Page
 export default function AllSongs(props) {
 
+  // Setting the song last end time in min and sec
   const sec = props.dura / 1000;
   const min = Math.floor(sec / 60);
   const secRemain = Math.floor(sec % 60);

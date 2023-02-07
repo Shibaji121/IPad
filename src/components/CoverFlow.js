@@ -1,5 +1,6 @@
 import React from "react";
 
+// Cover Flow Page
 export default function CoverFlow() {
 
 
